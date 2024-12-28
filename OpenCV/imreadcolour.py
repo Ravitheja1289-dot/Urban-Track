@@ -21,3 +21,8 @@ cv2.waitKey(0)
 # It is for removing/deleting created GUI window from screen
 # and memory
 cv2.destroyAllWindows()
+
+# printing shape
+print(img.shape)
+h,w=img.shape[:2]
+print("Height={}, Width={}".format(h,w))
