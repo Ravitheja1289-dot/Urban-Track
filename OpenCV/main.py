@@ -9,7 +9,7 @@ print("R = {}, G = {}, B = {}".format(R, G, B))
 
 B = image[100, 100, 0]
 print("B = {}".format(B))
-cv2.imshow("original Image:",image)
+# cv2.imshow("original Image:",image)
 
 # resize() 
 resize = cv2.resize(image, (500, 500))
