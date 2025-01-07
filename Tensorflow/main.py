@@ -12,7 +12,7 @@ def preprocess_image(image_path):
     image = tf.keras.applications.mobilenet_v2.preprocess_input(image)  # Normalize image
     return image
 
-image_path = 'ryan-walton-AbNO2iejoXA-unsplash.jpg'
+image_path = 'Janhvi-Kapoor-696x398.jpg'
 image = preprocess_image(image_path)
 
 predictions = model.predict(image)
