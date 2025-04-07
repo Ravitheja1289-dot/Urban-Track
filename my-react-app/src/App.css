@@ -1,89 +1,174 @@
-/* ----- Global Reset ----- */
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --primary: #38bdf8;
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --text-light: #f8fafc;
+  --text-muted: #cbd5e1;
+  --glass: rgba(255, 255, 255, 0.05);
+  --border: #334155;
+}
+
 * {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  color: black;
+  font-family: "Google Sans", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
-/* ----- Full-Screen Container ----- */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f9f9f9; /* Soft light background */
-  color: #333; /* Dark text for contrast */
-}
-
-/* ----- Navigation Bar ----- */
+/* NAVBAR */
 .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background: #ffffff; /* White Navbar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  padding: 1.25rem 2rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar h1 {
-  font-size: 1.5rem;
-  color: black; /* Blue accent */
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-/* ----- Navbar Links ----- */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
+.navbar a {
+  color: var(--text-light);
+  margin-left: 2rem;
   text-decoration: none;
-  color: #555;
-  font-size: 1rem;
-  transition: 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #007bff;
+.navbar a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
 }
 
-/* ----- Main Content Wrapper ----- */
-.content {
-  margin-top: 80px; /* Prevents overlap with navbar */
-  width: 100%;
+/* LIVE FEED */
+.live-feed-container {
+  padding: 4rem 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-/* ----- Footer ----- */
-.footer {
-  position: fixed;
-  bottom: 0;
+.live-feed-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.live-feed-image {
+  border-radius: 1.25rem;
+  border: 2px solid var(--border);
   width: 100%;
-  height: 40px;
-  background: #ffffff;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  max-width: 960px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out;
 }
 
-/* ----- Responsive Design ----- */
+.live-feed-image:hover {
+  transform: scale(1.02);
+}
+
+/* ANALYTICS */
+.analytics-container {
+  padding: 4rem 2rem;
+  background: var(--bg-light);
+}
+
+.analytics-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.chart-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+}
+
+/* HOME & ABOUT */
+.page-container {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.page-text {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+}
+
+/* UTILITIES */
+.section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+strong {
+  color: #4ade80;
+}
+
+/* RESPONSIVENESS */
 @media (max-width: 768px) {
-  .navbar h1 {
-    font-size: 1.2rem;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .nav-links a {
-    font-size: 0.9rem;
+
+  .navbar a {
+    margin: 0.75rem 0 0 0;
+  }
+
+  .live-feed-container,
+  .analytics-container,
+  .page-container {
+    padding: 2rem 1rem;
+  }
+
+  .live-feed-title,
+  .analytics-title,
+  .page-title {
+    font-size: 1.75rem;
   }
 }

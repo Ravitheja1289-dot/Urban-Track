@@ -9,23 +9,20 @@ from ultralytics import YOLO
 
 app = FastAPI()
 
-# CORS middleware to allow requests from frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace with your frontend URL
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Load YOLO model
+
 model = YOLO("yolov8n.pt")
 
-# Video source (Change 0 to use webcam)
 video_path = "traffic_video.mp4"
 cap = cv2.VideoCapture(video_path)
 
-# Shared variable for vehicle count
 vehicle_count = 0
 
 def generate_frames():

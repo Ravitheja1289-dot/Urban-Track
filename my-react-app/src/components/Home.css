@@ -1,0 +1,174 @@
+/* Home.css */
+
+.home-container {
+    padding: 3rem 2rem;
+    color: white;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #34d399; /* green-400 */
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-description {
+    font-size: 1.125rem;
+    max-width: 768px;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  
+  .text-muted {
+    color: #d1d5db; /* gray-300 */
+  }
+  
+  .highlight {
+    color: #6ee7b7; /* green-300 */
+    font-weight: bold;
+  }
+  
+  .feature-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 2.5rem;
+  }
+  
+  .feature-card {
+    background-color: #1f2937; /* gray-800 */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-left-width: 4px;
+  }
+  
+  .border-green {
+    border-left-color: #34d399;
+  }
+  
+  .border-yellow {
+    border-left-color: #facc15;
+  }
+  
+  .border-blue {
+    border-left-color: #60a5fa;
+  }
+  
+  .border-purple {
+    border-left-color: #c084fc;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-green {
+    color: #6ee7b7;
+  }
+  
+  .text-yellow {
+    color: #fde68a;
+  }
+  
+  .text-blue {
+    color: #bfdbfe;
+  }
+  
+  .text-purple {
+    color: #e9d5ff;
+  }
+  
+  .feature-description {
+    color: #d1d5db;
+  }
+  
+  .bold {
+    font-weight: 600;
+    color: white;
+  }
+  
+  .quote {
+    margin-top: 3rem;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    text-align: center;
+  }
+  
+  .cta {
+    margin-top: 4rem;
+    background: linear-gradient(to right, #10b981, #14b8a6);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    color: black;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-description {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-buttons .btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    transition: background 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .btn-dark {
+    background: black;
+    color: white;
+    margin-right: 1rem;
+  }
+  
+  .btn-dark:hover {
+    background: #1f2937;
+  }
+  
+  .btn-light {
+    background: white;
+    color: black;
+  }
+  
+  .btn-light:hover {
+    background: #e5e7eb;
+  }
+  
+  .faq-section {
+    margin-top: 5rem;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .faq-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #6ee7b7;
+  }
+  
+  .faq-item + .faq-item {
+    margin-top: 1.5rem;
+  }
+  
+  .faq-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .faq-answer {
+    color: #d1d5db;
+  }
+  
