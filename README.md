@@ -1,23 +1,22 @@
-🚦 Move Smart – Smart Traffic Automation System
-Move Smart is an intelligent traffic management system that utilizes computer vision and machine learning to optimize traffic flow, reduce congestion, and prioritize emergency vehicles. Designed for smart cities, this system dynamically adjusts traffic signal timings based on real-time traffic conditions using video analysis.
+# 🚦 Move Smart – Smart Traffic Automation System
 
-📌 Features
-🚗 Vehicle Detection: Detects and counts vehicles in real-time from CCTV/video feeds.
+**Move Smart** is an intelligent traffic management system that utilizes computer vision and machine learning to optimize traffic flow, reduce congestion, and prioritize emergency vehicles. Designed for smart cities, this system dynamically adjusts traffic signal timings based on real-time traffic conditions using video analysis.
 
-🚨 Emergency Vehicle Recognition: Identifies ambulances, fire trucks, and police vehicles using YOLOv8.
+---
 
-⏱ Dynamic Signal Timing: Automatically adjusts traffic light durations based on congestion levels.
+## 📌 Features
 
-🧠 Machine Learning: Implements ML models for accurate detection and classification.
+- 🚗 Vehicle Detection: Detects and counts vehicles in real-time from CCTV/video feeds.
+- 🚨 Emergency Vehicle Recognition: Identifies ambulances, fire trucks, and police vehicles using YOLOv8.
+- ⏱ Dynamic Signal Timing: Automatically adjusts traffic light durations based on congestion levels.
+- 🧠 Machine Learning: Implements ML models for accurate detection and classification.
+- 📷 OpenCV Integration: Processes live video streams and displays bounding boxes with labels.
+- 🌐 Scalable for Smart Cities: Designed to be integrated into existing traffic control infrastructure.
 
-📷 OpenCV Integration: Processes live video streams and displays bounding boxes with labels.
+---
 
-🌐 Scalable for Smart Cities: Designed to be integrated into existing traffic control infrastructure.
+## 📁 Project Structure
 
-📁 Project Structure
-bash
-Copy
-Edit
 move-smart/
 │
 ├── dataset/                     # Training and test datasets
@@ -37,76 +36,74 @@ move-smart/
 ├── requirements.txt            # Required Python packages
 ├── README.md                   # Project documentation
 └── run.py                      # Main file to start the system
-🛠 Installation
-Clone the repo
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/move-smart.git
-cd move-smart
-Create a virtual environment (optional but recommended)
+---
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install dependencies
+## 🛠 Installation
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-🚀 Usage
-Run the main script
+1. Clone the repo
+   git clone https://github.com/yourusername/move-smart.git
+   cd move-smart
 
-bash
-Copy
-Edit
-python run.py
-Customize the video input source
-Edit run.py to switch between live camera feed or pre-recorded video.
+2. Create a virtual environment (optional but recommended)
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
 
-View Results
-Processed videos with bounding boxes and labels will be saved in the output/ folder.
+3. Install dependencies
+   pip install -r requirements.txt
 
-🧠 Technologies Used
-Python
+---
 
-OpenCV
+## 🚀 Usage
 
-YOLOv8
+1. Run the main script
+   python run.py
 
-TensorFlow / PyTorch
+2. Customize the video input source  
+   Edit run.py to switch between live camera feed or pre-recorded video.
 
-NumPy, Pandas
+3. View Results  
+   Processed videos with bounding boxes and labels will be saved in the output/ folder.
 
-Matplotlib (for visualization)
+---
 
-📊 Future Enhancements
-Cloud-based deployment
+## 🧠 Technologies Used
 
-Dashboard to monitor real-time traffic stats
+- Python
+- OpenCV
+- YOLOv8
+- TensorFlow / PyTorch
+- NumPy, Pandas
+- Matplotlib (for visualization)
 
-Integration with IoT-enabled traffic lights
+---
 
-Multi-camera support with city-scale deployment
+## 📊 Future Enhancements
 
-GPS tracking for emergency route optimization
+- Cloud-based deployment
+- Dashboard to monitor real-time traffic stats
+- Integration with IoT-enabled traffic lights
+- Multi-camera support with city-scale deployment
+- GPS tracking for emergency route optimization
 
-🤝 Contributing
-Contributions, suggestions, and feedback are welcome!
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome!  
 Please open an issue or submit a pull request.
 
-📄 License
+---
+
+## 📄 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-🙌 Acknowledgements
-YOLOv8 by Ultralytics
+---
 
-OpenCV community
+## 🙌 Acknowledgements
 
-TensorFlow and PyTorch contributors
-
-MRCET Cyber Security Department – for hosting the hackathon where this project was born!
+- YOLOv8 by Ultralytics  
+- OpenCV community  
+- TensorFlow and PyTorch contributors  
+- MRCET Cyber Security Department – for hosting the hackathon where this project was born!
