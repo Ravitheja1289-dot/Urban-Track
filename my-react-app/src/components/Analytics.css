@@ -1,0 +1,32 @@
+.analytics-grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Create two equal columns */
+    gap: 1.5rem; /* Spacing between columns */
+    margin-top: 2rem;
+  }
+  
+  .chart-card {
+    background-color: #1f2937; /* Dark background for each card */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  .emergency-status {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  
+  .emergency-detected {
+    background-color: #fef2f2;
+  }
+  
+  .no-emergency {
+    background-color: #f0fdf4;
+  }
+.emergency-status.emergency-detected { color: #dc2626; } /* Red text for emergency detected */
+.emergency-status.no-emergency { color: #4ade80; } /* Green text for no emergency */
+  
