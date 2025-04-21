@@ -6,7 +6,7 @@ const About = () => (
     <p className="page-text">
       Move Smart uses <strong>YOLOv8, OpenCV</strong>, and <strong>FastAPI</strong> to create a dynamic, real-time traffic control and emergency vehicle detection system.
     </p>
-    <p className="page-text">Built by: <strong>Your Name</strong></p>
+    <p className="page-text">Built by: <strong>GTR Developers</strong></p>
     <p className="page-text">Tech Stack: React, Tailwind, FastAPI, OpenCV, YOLOv8</p>
     <p className="page-text">Hackathon/Research Project 2025</p>
   </section>
