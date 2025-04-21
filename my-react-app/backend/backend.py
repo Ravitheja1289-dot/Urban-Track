@@ -33,14 +33,19 @@ def generate_frames():
             break
 
         results = model(frame)
+        vehicle_types = {}
         total = 0
 
         for r in results:
-            total += len(r.boxes)
             for box in r.boxes:
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
                 label = model.names[int(box.cls[0])]
                 conf = round(float(box.conf[0]), 2)
+
+                # Only count vehicles
+                if label in ['car', 'truck', 'bus', 'motorcycle']:
+                    total += 1
+                    vehicle_types[label] = vehicle_types.get(label, 0) + 1
 
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 text = f"{label} {conf}"
@@ -48,6 +53,8 @@ def generate_frames():
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
         vehicle_count = total
+        global vehicle_type_counts
+        vehicle_type_counts = vehicle_types
 
         _, buffer = cv2.imencode(".jpg", frame)
         frame_bytes = buffer.tobytes()
@@ -58,9 +65,14 @@ def generate_frames():
 def video_feed():
     return StreamingResponse(generate_frames(), media_type="multipart/x-mixed-replace; boundary=frame")
 
+vehicle_type_counts = {}
+
 @app.get("/vehicle_count")
 async def get_vehicle_count():
-    return JSONResponse(content={"count": vehicle_count})
+    return JSONResponse(content={
+        "count": vehicle_count,
+        "types": vehicle_type_counts
+    })
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
